@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class FxJavaProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FxJavaProjectApplication.class, args);
+//		SpringApplication.run(FxJavaProjectApplication.class, args);
 		Price price1 = new Price(1,"GBP/USD",1.2499, 1.2596);
 		Price price2 = new Price(2,"EUR/JPY", 119.61,119.91);
 
@@ -21,6 +21,10 @@ public class FxJavaProjectApplication {
 		test1.applyBidCommission(priceFeed1);
 		test1.applyAskCommission(priceFeed1);
 		System.out.println(priceFeed1);
+
+
+
+
 
 	}
 }
