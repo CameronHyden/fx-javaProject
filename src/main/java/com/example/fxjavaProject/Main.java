@@ -1,2 +1,4 @@
-package com.example.fxjavaProject;public class Main {
+package com.example.fxjavaProject;
+
+public class Main {
 }
