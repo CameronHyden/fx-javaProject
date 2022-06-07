@@ -1,31 +1,27 @@
 package com.example.fxjavaProject;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 import java.sql.Timestamp;
 import java.util.Date;
 
-@Entity
+
 public class Price {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
     private String name;
     private double bid;
     private double ask;
-    private Timestamp dateCreated;
+    private String dateCreated;
 
-    public Price() { this.dateCreated = new Timestamp(new Date().getTime()); }
 
-    public Price(int id, String name, double bid, double ask) {
+
+    public Price(int id, String name, double bid, double ask, String dateCreated) {
         this.id = id;
         this.name = name;
         this.bid = bid;
         this.ask = ask;
-        this.dateCreated = new Timestamp(new Date().getTime());
+        this.dateCreated = dateCreated;
     }
 
     public int getId() {
@@ -58,6 +54,14 @@ public class Price {
 
     public void setAsk(double ask) {
         this.ask = ask;
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
     }
 
     @Override
