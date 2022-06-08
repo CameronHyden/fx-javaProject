@@ -12,7 +12,7 @@ public class FxJavaProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FxJavaProjectApplication.class, args);
 
-		
+
 
 	}
 }

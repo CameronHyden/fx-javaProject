@@ -23,7 +23,7 @@ public class ReadFxCSV {
 
         while ((line = br.readLine()) != null) {
             String[] attributes = line.split(",");
-            Price price = createPriceFeed(attributes);
+            Price price = createPrice(attributes);
             priceList.add(price);
 
 
@@ -38,7 +38,7 @@ public class ReadFxCSV {
         return priceList;
 
 }
-    public static Price createPriceFeed(String[] attributes) {
+    public static Price createPrice(String[] attributes) {
        int id = Integer.parseInt(attributes[0]);
        String name = attributes[1];
        double bid = Double.parseDouble(attributes[2]);

@@ -1,11 +1,5 @@
 package com.example.fxjavaProject;
 
-
-
-import java.sql.Timestamp;
-import java.util.Date;
-
-
 public class Price {
 
     private int id;
