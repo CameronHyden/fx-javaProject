@@ -10,18 +10,18 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.List;
+
 
 
 
 public class ReadFxCSV {
 
-    public static List<Price> createPriceArray(String file) {
+    public static ArrayList<Price> createPriceArray(String file) {
 
 
     Path pathToFile = Paths.get(file);
     String line = " ";
-    List<Price> priceList = new ArrayList<>();
+    ArrayList<Price> priceList = new ArrayList<>();
 
 		try {
         BufferedReader br = new BufferedReader(new FileReader(String.valueOf(pathToFile)));

@@ -4,25 +4,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
+
+import static java.lang.Integer.parseInt;
+import static java.util.Comparator.comparing;
 
 
 @RestController
 public class FxController {
 
     CreatePriceFeed newPriceFeed = new CreatePriceFeed();
-    List<Price> FXPriceFeed = newPriceFeed.createPriceFeed();
+    ArrayList<Price> FXPriceFeed = newPriceFeed.createPriceFeed();
 
     @GetMapping("/FX")
-    public List<Price> FXTest(){
+    public ArrayList<Price> FXTest(){
         return FXPriceFeed;
 
     }
-    @GetMapping("/FX/{name}")
-    public Price FXTest(@PathVariable String name){
+    @GetMapping("/FX/{id}")
+    public Price FXTest(@PathVariable String id){
         for (Price FXName: FXPriceFeed) {
-                if (FXName.getName() == name);
+                if (FXName.getId() == parseInt(id));
                 return FXName;
             }
         return null;
@@ -34,6 +37,14 @@ public class FxController {
         String[] Array = new String[feed.size()];
         feed.toArray(Array);
         return feed;
+    }
+    @GetMapping("/FXLatest")
+    public Price getLatestPrice() {
+        List<Price> feed = newPriceFeed.createPriceFeed();
+        Price latest = feed.stream().max(comparing(Price::getId)).get();
+        return latest;
+
+
     }
 }
 
