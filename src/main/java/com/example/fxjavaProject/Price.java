@@ -8,11 +8,11 @@ public class Price {
     private String name;
     private double bid;
     private double ask;
-    private long dateCreated;
+    private String dateCreated;
 
 
 
-    public Price(int id, String name, double bid, double ask, long dateCreated) {
+    public Price(int id, String name, double bid, double ask, String dateCreated) {
         this.id = id;
         this.name = name;
         this.bid = bid;
@@ -52,11 +52,11 @@ public class Price {
         this.ask = ask;
     }
 
-    public long getDateCreated() {
+    public String getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(long dateCreated) {
+    public void setDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
     }
 

@@ -50,7 +50,7 @@ public class ReadFxCSV {
        String name = attributes[1];
        double bid = Double.parseDouble(attributes[2]);
        double ask= Double.parseDouble(attributes[3]);
-       Long dateCreated = Long.parseLong(attributes[4]);;
+       String dateCreated = (attributes[4]);;
        return new Price(id,name,bid,ask,dateCreated);
     }
 
