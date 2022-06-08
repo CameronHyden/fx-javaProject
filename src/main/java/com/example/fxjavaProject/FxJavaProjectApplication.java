@@ -1,6 +1,7 @@
 package com.example.fxjavaProject;
 
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
@@ -12,17 +13,17 @@ import java.util.List;
 public class FxJavaProjectApplication {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(FxJavaProjectApplication.class, args);
+		SpringApplication.run(FxJavaProjectApplication.class, args);
+//
+//		CreatePriceFeed newPriceFeed = new CreatePriceFeed();
+//			List<Price> feed = newPriceFeed.createPriceFeed();
+//		System.out.println(feed);
 
-		CreatePriceFeed newPriceFeed = new CreatePriceFeed();
-			List<Price> feed = newPriceFeed.createPriceFeed();
-		System.out.println(feed);
-
-		for (Price date: feed) {
-			String s = date.getDateCreated();
-			long l=Long.parseLong(s);
-			System.out.println(l);
-			}
+//		for (Price date: feed) {
+//			String s = date.getDateCreated();
+//			long l=Long.parseLong(s);
+//			System.out.println(l);
+//			}
 
 
 
