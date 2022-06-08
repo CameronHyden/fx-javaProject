@@ -1,13 +1,20 @@
 package com.example.fxjavaProject;
 
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class ReadFxCSV {
 
@@ -43,7 +50,7 @@ public class ReadFxCSV {
        String name = attributes[1];
        double bid = Double.parseDouble(attributes[2]);
        double ask= Double.parseDouble(attributes[3]);
-       String dateCreated = attributes[4];
+       Long dateCreated = Long.parseLong(attributes[4]);;
        return new Price(id,name,bid,ask,dateCreated);
     }
 

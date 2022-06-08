@@ -1,16 +1,18 @@
 package com.example.fxjavaProject;
 
+import java.util.Date;
+
 public class Price {
 
     private int id;
     private String name;
     private double bid;
     private double ask;
-    private String dateCreated;
+    private long dateCreated;
 
 
 
-    public Price(int id, String name, double bid, double ask, String dateCreated) {
+    public Price(int id, String name, double bid, double ask, long dateCreated) {
         this.id = id;
         this.name = name;
         this.bid = bid;
@@ -50,11 +52,11 @@ public class Price {
         this.ask = ask;
     }
 
-    public String getDateCreated() {
+    public long getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(String dateCreated) {
+    public void setDateCreated(long dateCreated) {
         this.dateCreated = dateCreated;
     }
 

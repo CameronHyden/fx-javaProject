@@ -16,4 +16,20 @@ public class FxController {
         return newPriceFeed.createPriceFeed();
 
     }
+    @GetMapping("/FXDate")
+    public List<Price> FXTestDate(){
+        List<Price> feed = newPriceFeed.createPriceFeed();
+        String[] Array = new String[feed.size()];
+        feed.toArray(Array);
+        return feed;
+    }
 }
+
+//    public static double arrayMax(double[] arr) {
+//        double max = Double.NEGATIVE_INFINITY;
+//
+//        for(double cur: arr)
+//            max = Math.max(max, cur);
+//
+//        return max;
+//    }
