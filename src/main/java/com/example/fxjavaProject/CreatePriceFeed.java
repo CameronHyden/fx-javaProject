@@ -6,9 +6,11 @@ public class CreatePriceFeed {
 
     public ArrayList<Price>createPriceFeed(){
         ArrayList<Price> priceFeed = ReadFxCSV.createPriceArray("src/main/Data/fx-data.csv");
-        CommissionService test1 = new CommissionService();
-        test1.applyBidCommission(priceFeed, 0.001);
-        test1.applyAskCommission(priceFeed, 0.001);
+        CommissionService commissionService = new CommissionService();
+        commissionService.applyBidCommission(priceFeed, 0.001);
+        commissionService.applyAskCommission(priceFeed, 0.001);
+        SortPriceFeedService sortPriceFeedService = new SortPriceFeedService();
+        sortPriceFeedService.sortPriceFeed(priceFeed);
         return priceFeed;
     }
 }

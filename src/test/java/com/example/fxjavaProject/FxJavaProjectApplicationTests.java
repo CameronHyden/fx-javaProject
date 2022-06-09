@@ -10,4 +10,5 @@ class FxJavaProjectApplicationTests {
 	void contextLoads() {
 	}
 
+
 }

@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.lang.Integer.parseInt;
 import static java.util.Comparator.comparing;
@@ -19,18 +21,17 @@ public class FxJavaProjectApplication {
 
 		CreatePriceFeed newPriceFeed = new CreatePriceFeed();
 		ArrayList<Price> feed = newPriceFeed.createPriceFeed();
-		String id = "110";
+
+
+
+
 
 
 //				ArrayList<Price> soredFeed = (ArrayList<Price>) feed.stream().sorted();
 //				System.out.println(soredFeed);
 
-		//always going to return latest price?
-//		Price latestValue= feed.stream().max(comparing(f -> f.getBid())).get();
-//		System.out.println(latestValue);
 
 
-		System.out.println(feed.stream().max(comparing(Price::getId)).get());
 
 
 
