@@ -2,7 +2,7 @@ package com.example.fxjavaProject;
 
 import java.util.ArrayList;
 
-public class CreatePriceFeed {
+public class CreatePriceFeedService {
 
     public ArrayList<Price>createPriceFeed(){
         ArrayList<Price> priceFeed = ReadFxCSV.createPriceArray("src/main/Data/fx-data.csv");

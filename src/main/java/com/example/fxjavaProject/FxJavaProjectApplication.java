@@ -5,15 +5,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 
-
 @SpringBootApplication
 @CrossOrigin
 public class FxJavaProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FxJavaProjectApplication.class, args);
-
-
 
 	}
 }

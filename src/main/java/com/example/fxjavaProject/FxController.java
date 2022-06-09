@@ -23,12 +23,12 @@ public class FxController {
 
 
     @GetMapping("/FX")
-    public List<Price> FXTest(){
-       return sortPriceFeedService.sortPriceFeed(repository.findAll());
+    public ResponseEntity<List<Price>> GetPriceFeed(){
+       return ResponseEntity.status(HttpStatus.OK).body(sortPriceFeedService.sortPriceFeed(repository.findAll()));
 
     }
     @GetMapping("/FX/{id}")
-    public ResponseEntity<Price> FXTest(@PathVariable String id){
+    public ResponseEntity<Price> GetPriceById(@PathVariable String id){
         for (Price price: repository.findAll()) {
                 if (price.getId() == parseInt(id)){
             return ResponseEntity.status(HttpStatus.OK).body(price);
@@ -38,11 +38,10 @@ public class FxController {
     }
 
     @GetMapping("/FXLatest")
-    public Price getLatestPrice() {
+    public ResponseEntity<Price> getLatestPrice() {
         List<Price> feed = repository.findAll();
         Price latest = feed.stream().max(comparing(Price::getId)).get();
-
-        return latest;
+        return ResponseEntity.status(HttpStatus.OK).body(latest);
 
     }
     @PostMapping("/addPrice")
