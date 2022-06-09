@@ -1,9 +1,12 @@
 package com.example.fxjavaProject;
 
-import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Price {
-
+    @Id
     private int id;
     private String name;
     private double bid;
@@ -11,6 +14,7 @@ public class Price {
     private String dateCreated;
 
 
+    public  Price(){};
 
     public Price(int id, String name, double bid, double ask, String dateCreated) {
         this.id = id;

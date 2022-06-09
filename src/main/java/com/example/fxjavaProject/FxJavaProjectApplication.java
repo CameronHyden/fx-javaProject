@@ -2,18 +2,15 @@ package com.example.fxjavaProject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import static java.lang.Integer.parseInt;
-import static java.util.Comparator.comparing;
 
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+
+@SpringBootApplication
+@CrossOrigin
 public class FxJavaProjectApplication {
 
 	public static void main(String[] args) {
