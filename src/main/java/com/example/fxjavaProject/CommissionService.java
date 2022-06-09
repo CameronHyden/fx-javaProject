@@ -2,7 +2,7 @@ package com.example.fxjavaProject;
 
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class CommissionService {
     public ArrayList<Price> applyAskCommission(ArrayList<Price> prices, double commission){
