@@ -19,22 +19,5 @@ public class FxJavaProjectApplication {
 		CreatePriceFeed newPriceFeed = new CreatePriceFeed();
 		ArrayList<Price> feed = newPriceFeed.createPriceFeed();
 
-
-
-
-
-
-//				ArrayList<Price> soredFeed = (ArrayList<Price>) feed.stream().sorted();
-//				System.out.println(soredFeed);
-
-
-
-
-
-
-
-
-
-
 	}
 }

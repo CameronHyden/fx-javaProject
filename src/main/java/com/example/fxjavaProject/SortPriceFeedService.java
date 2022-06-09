@@ -1,10 +1,14 @@
 package com.example.fxjavaProject;
 
-import java.util.ArrayList;
-import java.util.Comparator;
+import org.springframework.stereotype.Service;
 
+
+import java.util.Comparator;
+import java.util.List;
+
+@Service
 public class SortPriceFeedService {
-    public ArrayList<Price> sortPriceFeed(ArrayList<Price> prices){
+    public List<Price> sortPriceFeed(List<Price> prices){
                 prices.sort(Comparator.comparingInt(Price::getId).reversed());
                 return prices;
     }

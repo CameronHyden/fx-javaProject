@@ -9,8 +9,6 @@ public class CreatePriceFeed {
         CommissionService commissionService = new CommissionService();
         commissionService.applyBidCommission(priceFeed, 0.001);
         commissionService.applyAskCommission(priceFeed, 0.001);
-        SortPriceFeedService sortPriceFeedService = new SortPriceFeedService();
-        sortPriceFeedService.sortPriceFeed(priceFeed);
         return priceFeed;
     }
 }

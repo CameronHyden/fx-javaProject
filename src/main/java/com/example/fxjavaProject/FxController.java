@@ -14,27 +14,29 @@ import static java.util.Comparator.comparing;
 
 @RestController
 public class FxController {
+    @Autowired
+    SortPriceFeedService sortPriceFeedService;
+
 
     @Autowired
     PriceRepository repository;
 
-    CreatePriceFeed newPriceFeed = new CreatePriceFeed();
-    ArrayList<Price> FXPriceFeed = newPriceFeed.createPriceFeed();
 
     @GetMapping("/FX")
     public List<Price> FXTest(){
-        return FXPriceFeed;
+       return sortPriceFeedService.sortPriceFeed(repository.findAll());
 
     }
     @GetMapping("/FX/{id}")
-    public Price FXTest(@PathVariable String id){
-        for (Price FXName: FXPriceFeed) {
-                if (FXName.getId() == parseInt(id));
-                return FXName;
+    public ResponseEntity<Price> FXTest(@PathVariable String id){
+        for (Price price: repository.findAll()) {
+                if (price.getId() == parseInt(id)){
+            return ResponseEntity.status(HttpStatus.OK).body(price);
             }
-        return null;
         }
-        
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+    }
+
     @GetMapping("/FXLatest")
     public Price getLatestPrice() {
         List<Price> feed = repository.findAll();
