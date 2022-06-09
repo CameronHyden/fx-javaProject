@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 
 
-
 public class CommissionServiceTest {
 
     public CommissionService commissionService;

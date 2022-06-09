@@ -1,8 +1,5 @@
 package com.example.fxjavaProject;
-
 import org.springframework.stereotype.Service;
-
-
 import java.util.Comparator;
 import java.util.List;
 
