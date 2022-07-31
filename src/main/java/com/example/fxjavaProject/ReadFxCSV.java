@@ -1,7 +1,6 @@
 package com.example.fxjavaProject;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -15,6 +14,7 @@ public class ReadFxCSV {
     Path pathToFile = Paths.get(file);
     String line = " ";
     ArrayList<Price> priceList = new ArrayList<>();
+    
 
 		try {
         BufferedReader br = new BufferedReader(new FileReader(String.valueOf(pathToFile)));
@@ -26,9 +26,6 @@ public class ReadFxCSV {
 
 
         }
-    } catch (
-    FileNotFoundException e) {
-        e.printStackTrace();
     } catch (
     IOException e) {
         e.printStackTrace();

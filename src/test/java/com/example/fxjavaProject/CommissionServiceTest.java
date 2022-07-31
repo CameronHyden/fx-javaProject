@@ -24,7 +24,6 @@ public class CommissionServiceTest {
         assertEquals("ask price should be increased by 0.1% in commission",
                 commissionService.applyAskCommission(testFeed, 0.001),
                 testFeed);
-        System.out.println(testFeed);
     }
     @Test
     public void testBidCommission(){
